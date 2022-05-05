@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <title>눈 내리는 샤갈의 마을</title>
+<style>
+    body {
+        background-image: url("https://t1.daumcdn.net/cfile/blog/1516DA4E4EEEBC6223");
+        background-repeat : no-repeat;
+        background-size: 100%;
+        background-color: white;
+    }
+    div {
+        border-style: none;
+        font-size: 50px;
+        color: white;
+    }
+</style>
+<script>
+    var width = 2000;
+    var height= 870;
+    var snowcount = 120;
+
+    function first_pos() {
+        var text= "";
+        for (i = 0; i<snowcount; i++) {
+            ranlocation = Math.floor(Math.random() * (width-1+1)+1);
+            rantoplocation = Math.floor(Math.random() * (height-1+1)+1);
+            text = "<div style='position: absolute; top:"+ rantoplocation + "px; left: " + ranlocation +"px; '>*</div>";
+            document.body.innerHTML += text;
+        }
+    }
+    function down_pos() {
+        var arrdivs = document.getElementsByTagName("div");
+
+        for (i = 0; i < arrdivs.length; i++) {
+            var newoffsettop = arrdivs[i].offsetTop + 10;
+            var offsetleft = arrdivs[i].offsetLeft;
+
+            if(newoffsettop > 850){ 
+            	start_pos(arrdivs[i]);
+            }
+            else {
+            	var newdiv = document.createElement("div");
+                
+                newdiv.setAttribute("style", "left: "+ offsetleft +"px; top : "+ newoffsettop +"px; position : absolute;");
+                
+                newdiv.innerHTML = "*";
+                document.body.replaceChild(newdiv, arrdivs[i]);
+            }
+        }
+
+    }
+
+    function start_pos(arrdiv) {
+        ranlocation = Math.floor(Math.random() * (width-1+1)+1);
+        rantoplocation = Math.floor(Math.random() * (height-700-1+1)+1);
+
+        var newdiv = document.createElement("div");
+        //newdiv.style.left = ranlocation;
+        //newdiv.style.top = rantoplocation;
+        //newdiv.style.position = "absolute";
+        
+        newdiv.setAttribute("style", "left: "+ ranlocation +"px; top : "+ rantoplocation +"px; position : absolute;");
+        
+        newdiv.innerHTML = "*";
+        
+        document.body.replaceChild(newdiv, arrdiv);
+
+    }
+    
+    document.addEventListener("DOMContentLoaded", function(){
+    	first_pos();
+    	setInterval("down_pos()" , 200);
+    });
+
+</script>
+</head>
+<body>
+</body>
+</html>
