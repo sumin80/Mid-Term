@@ -16,3 +16,14 @@ audio {
 #list {
     background-color: mistyrose;
 }
+ #text{
+     background-color: rgb(242, 150, 150);
+ }
+
+ #label{
+     background-color: lightgray;
+     font-size: 20px;
+ }
+ #table{
+     background-color: rgba(250, 250, 172, 0.245);
+ }
