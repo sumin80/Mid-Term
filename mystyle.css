@@ -1,3 +1,22 @@
 body {
-    background-color: linen; margin-left: 30px; margin-right: 30ox;
+    background-color: linen; margin-left: 30px; margin-right: 30px;
+}
+img{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+div{
+    margin-left: 40px;
+}
+audio {
+    position: relative;
+    float:right;
+    right: 50px;
+}
+
+.homepage {
+    text-align: right;
+
+
 }
