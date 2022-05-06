@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>나의 소개</title>
+<style>
+   body { background-color: gold; color: purple;
+          margin-left : 40px; margin-right: 40px; }
+   h3 { text-align : center; color: blue;}
+   hr { height : 3px; border: solid grey;
+        background-color: grey;}
+   span { color: red; font-size: 30px; }
+   p { text-align : center;}
+</style>
+<script>
+   function show() {
+      document.getElementById("fig").src="./assets/photo.jpg";
+   }
+   function hide() {
+      document.getElementById("fig").src="";
+   }
+</script>
+</head>
+<body>
+<h3 onmouseover="show()" onmouseout="hide()">
+    유수민</h3>
+<hr>
+<div><img id="fig" src=""><div/>
+<p>
+저는 단국대학교 소프트웨어학과에 재학 중인 19학번 학생입니다.<br>
+현재 <span>오픈소스SW활용</span> 과목을 수강 중입니다.<br>
+이번 학기가 별써 4학년 1학기라는 사실이 믿기지 않습니다<br>
+이제 학교 다닐 날이 얼마 안남았다는 사실에 서글퍼집니다<br>
+얼마남지 않은 학교 생활 후회 남지 않도록 뭐든지 열심히 노력할 것입니다!
+</p>
+</body>
+</html>
