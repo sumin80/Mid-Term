@@ -6,17 +6,13 @@ img{
     margin-right: 20px;
     margin-bottom: 20px;
 }
-div{
-    margin-left: 40px;
-}
+
 audio {
     position: relative;
     float:right;
     right: 50px;
 }
 
-.homepage {
-    text-align: right;
-
-
+#list {
+    background-color: mistyrose;
 }
